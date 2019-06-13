@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             utils.appWasOpened = true
         }
         
+        IQKeyboardManager.shared.enable = true
+        
         return true
     }
 

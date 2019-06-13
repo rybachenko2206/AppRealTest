@@ -12,12 +12,7 @@ class PersonTableViewCell: UITableViewCell, ReusableCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    var person: Person? {
-        didSet {
-            self.nameLabel.text = person?.name
-        }
-    }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     override func awakeFromNib() {

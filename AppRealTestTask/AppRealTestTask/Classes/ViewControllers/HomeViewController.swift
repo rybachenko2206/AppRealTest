@@ -43,7 +43,17 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(forIndexPath: indexPath) as PersonTableViewCell
-        cell.person = persons[indexPath.row]
+        let pers = persons[indexPath.row]
+        cell.nameLabel.text = pers.name
+        
+        cell.activityIndicator.startAnimating()
+        ImageManager.shared.imageModel(with: pers.avatarName ?? "", completion: { imageObj in
+            cell.activityIndicator.stopAnimating()
+            if imageObj?.name == pers.avatarName {
+                cell.avatarImageView.image = imageObj?.image
+            }
+        })
+        
         return cell
     }
 }
@@ -51,8 +61,11 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pf()
-        // TODO: - show details vc
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detaisVc = PersonDetailsViewController.storyboardInstance(.main)
+        detaisVc.person = persons[indexPath.row]
+        self.navigationController?.show(detaisVc, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

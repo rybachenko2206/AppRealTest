@@ -32,17 +32,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="97a-2n-Tmm">
+                        <rect key="frame" x="35" y="31" width="20" height="20"/>
+                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gHI-EO-bLm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Oj-ZM-dhJ"/>
                     <constraint firstAttribute="trailing" secondItem="NGR-Kd-65N" secondAttribute="trailing" constant="16" id="9jB-tz-M8o"/>
+                    <constraint firstItem="97a-2n-Tmm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="F5f-o3-wou"/>
                     <constraint firstItem="gHI-EO-bLm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IVl-hN-wnW"/>
+                    <constraint firstAttribute="bottom" secondItem="97a-2n-Tmm" secondAttribute="bottom" constant="30.5" id="KPt-ec-yWw"/>
                     <constraint firstItem="NGR-Kd-65N" firstAttribute="leading" secondItem="gHI-EO-bLm" secondAttribute="trailing" constant="15" id="P7m-im-LRf"/>
                     <constraint firstItem="NGR-Kd-65N" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cR2-6V-aUv"/>
+                    <constraint firstItem="97a-2n-Tmm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="zvd-To-NjY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="activityIndicator" destination="97a-2n-Tmm" id="zIX-G9-5h7"/>
                 <outlet property="avatarImageView" destination="gHI-EO-bLm" id="uUc-Dm-oXQ"/>
                 <outlet property="nameLabel" destination="NGR-Kd-65N" id="PMM-XF-qVy"/>
             </connections>

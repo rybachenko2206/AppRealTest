@@ -41,6 +41,73 @@
             </objects>
             <point key="canvasLocation" x="884" y="92"/>
         </scene>
+        <!--Person Details View Controller-->
+        <scene sceneID="if9-gC-Qmu">
+            <objects>
+                <viewController storyboardIdentifier="PersonDetailsViewController" id="VvM-ER-OYB" customClass="PersonDetailsViewController" customModule="AppRealTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2Y-zz-g11">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-F0-jWh" userLabel="Avatar Container View">
+                                <rect key="frame" x="56" y="89" width="303" height="303"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-BH-Lwh">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="303"/>
+                                    </imageView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-aH-IJ2">
+                                        <rect key="frame" x="133" y="133" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fJ5-aH-IJ2" firstAttribute="centerY" secondItem="gTR-F0-jWh" secondAttribute="centerY" id="4ZX-je-AyY"/>
+                                    <constraint firstAttribute="width" secondItem="gTR-F0-jWh" secondAttribute="height" multiplier="1:1" id="A52-Hc-H0d"/>
+                                    <constraint firstItem="OO7-BH-Lwh" firstAttribute="top" secondItem="gTR-F0-jWh" secondAttribute="top" id="EOZ-Su-iQ4"/>
+                                    <constraint firstItem="OO7-BH-Lwh" firstAttribute="leading" secondItem="gTR-F0-jWh" secondAttribute="leading" id="NT4-lg-uGR"/>
+                                    <constraint firstAttribute="trailing" secondItem="OO7-BH-Lwh" secondAttribute="trailing" id="ZGl-CE-2SD"/>
+                                    <constraint firstAttribute="bottom" secondItem="OO7-BH-Lwh" secondAttribute="bottom" id="jGk-8P-KJm"/>
+                                    <constraint firstItem="fJ5-aH-IJ2" firstAttribute="centerX" secondItem="gTR-F0-jWh" secondAttribute="centerX" id="pZn-97-Jq1"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zz1-cy-br2">
+                                <rect key="frame" x="56" y="421" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gMl-Hr-uwi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gTR-F0-jWh" firstAttribute="leading" secondItem="p8N-nj-gzi" secondAttribute="leading" constant="56" id="4qK-F2-AT7"/>
+                            <constraint firstItem="p8N-nj-gzi" firstAttribute="trailing" secondItem="gTR-F0-jWh" secondAttribute="trailing" constant="55" id="EjN-rX-uJ0"/>
+                            <constraint firstItem="gTR-F0-jWh" firstAttribute="top" secondItem="p8N-nj-gzi" secondAttribute="top" constant="45" id="Se6-Wu-iuI"/>
+                            <constraint firstItem="p8N-nj-gzi" firstAttribute="trailing" secondItem="Zz1-cy-br2" secondAttribute="trailing" constant="55" id="lcK-7p-y40"/>
+                            <constraint firstItem="Zz1-cy-br2" firstAttribute="top" secondItem="gTR-F0-jWh" secondAttribute="bottom" constant="29" id="vnB-Hd-CfD"/>
+                            <constraint firstItem="Zz1-cy-br2" firstAttribute="leading" secondItem="p8N-nj-gzi" secondAttribute="leading" constant="56" id="wTI-wO-unf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p8N-nj-gzi"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="fJ5-aH-IJ2" id="FJz-VZ-uF6"/>
+                        <outlet property="avatarImageView" destination="OO7-BH-Lwh" id="nqn-9C-hWp"/>
+                        <outlet property="nameTextField" destination="Zz1-cy-br2" id="iek-wk-nF9"/>
+                        <outlet property="saveBarButtonItem" destination="2Ex-Gh-cfp" id="QQ4-yr-tld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qa5-Ma-EcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem systemItem="save" id="2Ex-Gh-cfp">
+                    <connections>
+                        <action selector="saveButtonTapped:" destination="VvM-ER-OYB" id="uvL-s3-36s"/>
+                    </connections>
+                </barButtonItem>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="91.741071428571431"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eFk-Hc-MZw">
             <objects>

@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+
+typealias Completion = () -> Void
+
+
+let downloadImagePath = "http://download.glide.me/pre-login-avatars/avatars_cartoon_animals_%@.png"
+
+
+
