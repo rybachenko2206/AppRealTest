@@ -57,9 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				05357EDF22B23B1F00C5F073 /* Classes */,
-				05357ECE22B23ADF00C5F073 /* Main.storyboard */,
-				05357ED422B23AE000C5F073 /* Assets.xcassets */,
-				05357ED622B23AE000C5F073 /* LaunchScreen.storyboard */,
+				05357EE922B23C0B00C5F073 /* Resources */,
 				05357ED922B23AE000C5F073 /* Info.plist */,
 				05357ED122B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld */,
 			);
@@ -113,6 +111,24 @@
 			children = (
 			);
 			path = CDModels;
+			sourceTree = "<group>";
+		};
+		05357EE922B23C0B00C5F073 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05357EEA22B23CAE00C5F073 /* Storyboards */,
+				05357ED422B23AE000C5F073 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05357EEA22B23CAE00C5F073 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				05357ECE22B23ADF00C5F073 /* Main.storyboard */,
+				05357ED622B23AE000C5F073 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
 				INFOPLIST_FILE = AppRealTestTask/Info.plist;
@@ -352,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
 				INFOPLIST_FILE = AppRealTestTask/Info.plist;
