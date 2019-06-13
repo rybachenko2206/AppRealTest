@@ -13,6 +13,8 @@
 		05357ED822B23AE000C5F073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05357ED622B23AE000C5F073 /* LaunchScreen.storyboard */; };
 		05357EE122B23B1F00C5F073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05357EE022B23B1F00C5F073 /* AppDelegate.swift */; };
 		05357EE622B23BA400C5F073 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05357EE522B23BA400C5F073 /* HomeViewController.swift */; };
+		05357EEE22B2403300C5F073 /* Persons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05357EED22B2403300C5F073 /* Persons.plist */; };
+		05357EF022B242FC00C5F073 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05357EEF22B242FC00C5F073 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		05357ED922B23AE000C5F073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05357EE022B23B1F00C5F073 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05357EE522B23BA400C5F073 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05357EED22B2403300C5F073 /* Persons.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Persons.plist; sourceTree = "<group>"; };
+		05357EEF22B242FC00C5F073 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,6 @@
 			children = (
 				05357EDF22B23B1F00C5F073 /* Classes */,
 				05357EE922B23C0B00C5F073 /* Resources */,
-				05357ED922B23AE000C5F073 /* Info.plist */,
 			);
 			path = AppRealTestTask;
 			sourceTree = "<group>";
@@ -66,10 +69,10 @@
 		05357EDF22B23B1F00C5F073 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05357EE022B23B1F00C5F073 /* AppDelegate.swift */,
 				05357EE222B23B6900C5F073 /* Models */,
 				05357EE322B23B7100C5F073 /* Views */,
 				05357EE422B23B7A00C5F073 /* ViewControllers */,
-				05357EE022B23B1F00C5F073 /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -101,6 +104,7 @@
 		05357EE722B23BB400C5F073 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				05357EEF22B242FC00C5F073 /* CoreDataStack.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -115,6 +119,7 @@
 		05357EE922B23C0B00C5F073 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05357EEC22B23FE800C5F073 /* Plists */,
 				05357EEB22B23D1900C5F073 /* CoreData */,
 				05357EEA22B23CAE00C5F073 /* Storyboards */,
 				05357ED422B23AE000C5F073 /* Assets.xcassets */,
@@ -137,6 +142,15 @@
 				05357ED122B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		05357EEC22B23FE800C5F073 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				05357ED922B23AE000C5F073 /* Info.plist */,
+				05357EED22B2403300C5F073 /* Persons.plist */,
+			);
+			path = Plists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05357ED822B23AE000C5F073 /* LaunchScreen.storyboard in Resources */,
+				05357EEE22B2403300C5F073 /* Persons.plist in Resources */,
 				05357ED522B23AE000C5F073 /* Assets.xcassets in Resources */,
 				05357ED022B23ADF00C5F073 /* Main.storyboard in Resources */,
 			);
@@ -213,6 +228,7 @@
 				05357EE122B23B1F00C5F073 /* AppDelegate.swift in Sources */,
 				05357ED322B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld in Sources */,
 				05357EE622B23BA400C5F073 /* HomeViewController.swift in Sources */,
+				05357EF022B242FC00C5F073 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +377,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
-				INFOPLIST_FILE = AppRealTestTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppRealTestTask/Resources/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +396,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
-				INFOPLIST_FILE = AppRealTestTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppRealTestTask/Resources/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
