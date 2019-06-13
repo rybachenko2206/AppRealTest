@@ -12,8 +12,23 @@ import CoreData
 class CoreDataStack {
     
     static let shared = CoreDataStack()
-    private init() {}
+    private init() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(mainContextChanged(notification:)),
+                                               name: .NSManagedObjectContextDidSave,
+                                               object: self.persistentContainer.viewContext)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(bgContextChanged(notification:)),
+                                               name: .NSManagedObjectContextDidSave,
+                                               object: self.backgroundContext)
+    }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    // MARK: - Properties
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -41,17 +56,54 @@ class CoreDataStack {
         return container
     }()
     
-    func saveContext () {
-        let context = persistentContainer.viewContext
+    lazy var backgroundContext: NSManagedObjectContext = {
+        return self.persistentContainer.newBackgroundContext()
+    }()
+    
+    lazy var mainContext: NSManagedObjectContext = {
+        return self.persistentContainer.viewContext
+    }()
+    
+    
+    // MARK: Notification observers
+    
+    @objc func mainContextChanged(notification: Notification) {
+        backgroundContext.perform {
+            self.backgroundContext.mergeChanges(fromContextDidSave: notification)
+        }
+    }
+    @objc func bgContextChanged(notification: Notification) {
+        mainContext.perform {
+            self.mainContext.mergeChanges(fromContextDidSave: notification)
+        }
+    }
+    
+    
+    // MARK: - Public funcs
+    func saveContext(_ context: NSManagedObjectContext) {
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
+    
+    
+    func addInitialPersons() {
+        let bgContext = self.backgroundContext
+        guard let plistPath = Bundle.main.path(forResource: "Persons", ofType: "plist"),
+            let dictionary = NSDictionary.init(contentsOfFile: plistPath),
+            let personsArr = dictionary["Persons"] as? [[String: Any]] else { return }
+        
+        personsArr.forEach({ dict in
+            let name = dict["name"] as? String ?? ""
+            let avatarName = dict["avatarName"] as? String ?? ""
+            let _ = Person.newPerson(name: name, avatarName: avatarName, context: bgContext)
+        })
+        self.saveContext(bgContext)
+    }
+    
 }

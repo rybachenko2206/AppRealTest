@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05159FEF22B2465900EAC845 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FEE22B2465900EAC845 /* Constants.swift */; };
+		05159FF322B24A3700EAC845 /* PrintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FF222B24A3700EAC845 /* PrintExtensions.swift */; };
+		05159FF522B24B7900EAC845 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FF422B24B7900EAC845 /* Person.swift */; };
+		05159FF822B24C2800EAC845 /* ManagedObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FF722B24C2800EAC845 /* ManagedObjectType.swift */; };
+		05159FFA22B250A900EAC845 /* ManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FF922B250A900EAC845 /* ManagedObjectContext.swift */; };
+		05159FFC22B2523D00EAC845 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FFB22B2523D00EAC845 /* Utilities.swift */; };
+		0515A00022B25DE000EAC845 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05159FFE22B25DE000EAC845 /* PersonTableViewCell.swift */; };
+		0515A00122B25DE000EAC845 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05159FFF22B25DE000EAC845 /* PersonTableViewCell.xib */; };
+		0515A00322B25F3E00EAC845 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515A00222B25F3E00EAC845 /* ReusableCell.swift */; };
+		0515A00522B25F4B00EAC845 /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515A00422B25F4B00EAC845 /* UITableView+Methods.swift */; };
 		05357ED022B23ADF00C5F073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05357ECE22B23ADF00C5F073 /* Main.storyboard */; };
 		05357ED322B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05357ED122B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld */; };
 		05357ED522B23AE000C5F073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05357ED422B23AE000C5F073 /* Assets.xcassets */; };
@@ -18,6 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05159FEE22B2465900EAC845 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		05159FF222B24A3700EAC845 /* PrintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintExtensions.swift; sourceTree = "<group>"; };
+		05159FF422B24B7900EAC845 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		05159FF722B24C2800EAC845 /* ManagedObjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectType.swift; sourceTree = "<group>"; };
+		05159FF922B250A900EAC845 /* ManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectContext.swift; sourceTree = "<group>"; };
+		05159FFB22B2523D00EAC845 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		05159FFE22B25DE000EAC845 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		05159FFF22B25DE000EAC845 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		0515A00222B25F3E00EAC845 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		0515A00422B25F4B00EAC845 /* UITableView+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
 		05357EC722B23ADF00C5F073 /* AppRealTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRealTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05357ECF22B23ADF00C5F073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05357ED222B23ADF00C5F073 /* AppRealTestTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppRealTestTask.xcdatamodel; sourceTree = "<group>"; };
@@ -41,6 +61,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05159FF022B2499B00EAC845 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				05159FEE22B2465900EAC845 /* Constants.swift */,
+				05159FFB22B2523D00EAC845 /* Utilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		05159FF122B249F200EAC845 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05159FF222B24A3700EAC845 /* PrintExtensions.swift */,
+				05159FF922B250A900EAC845 /* ManagedObjectContext.swift */,
+				0515A00422B25F4B00EAC845 /* UITableView+Methods.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		05159FF622B24BC700EAC845 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05159FF722B24C2800EAC845 /* ManagedObjectType.swift */,
+				0515A00222B25F3E00EAC845 /* ReusableCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		05159FFD22B25DA600EAC845 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				05159FFE22B25DE000EAC845 /* PersonTableViewCell.swift */,
+				05159FFF22B25DE000EAC845 /* PersonTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		05357EBE22B23ADF00C5F073 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				05357EE022B23B1F00C5F073 /* AppDelegate.swift */,
+				05159FF622B24BC700EAC845 /* Protocols */,
+				05159FF122B249F200EAC845 /* Extensions */,
+				05159FF022B2499B00EAC845 /* Utils */,
 				05357EE222B23B6900C5F073 /* Models */,
 				05357EE322B23B7100C5F073 /* Views */,
 				05357EE422B23B7A00C5F073 /* ViewControllers */,
@@ -89,6 +149,7 @@
 		05357EE322B23B7100C5F073 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				05159FFD22B25DA600EAC845 /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +173,7 @@
 		05357EE822B23BBC00C5F073 /* CDModels */ = {
 			isa = PBXGroup;
 			children = (
+				05159FF422B24B7900EAC845 /* Person.swift */,
 			);
 			path = CDModels;
 			sourceTree = "<group>";
@@ -215,6 +277,7 @@
 				05357EEE22B2403300C5F073 /* Persons.plist in Resources */,
 				05357ED522B23AE000C5F073 /* Assets.xcassets in Resources */,
 				05357ED022B23ADF00C5F073 /* Main.storyboard in Resources */,
+				0515A00122B25DE000EAC845 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05159FF822B24C2800EAC845 /* ManagedObjectType.swift in Sources */,
+				05159FEF22B2465900EAC845 /* Constants.swift in Sources */,
 				05357EE122B23B1F00C5F073 /* AppDelegate.swift in Sources */,
 				05357ED322B23ADF00C5F073 /* AppRealTestTask.xcdatamodeld in Sources */,
+				0515A00522B25F4B00EAC845 /* UITableView+Methods.swift in Sources */,
+				0515A00022B25DE000EAC845 /* PersonTableViewCell.swift in Sources */,
+				05159FFA22B250A900EAC845 /* ManagedObjectContext.swift in Sources */,
+				05159FF322B24A3700EAC845 /* PrintExtensions.swift in Sources */,
+				05159FF522B24B7900EAC845 /* Person.swift in Sources */,
+				0515A00322B25F3E00EAC845 /* ReusableCell.swift in Sources */,
 				05357EE622B23BA400C5F073 /* HomeViewController.swift in Sources */,
+				05159FFC22B2523D00EAC845 /* Utilities.swift in Sources */,
 				05357EF022B242FC00C5F073 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
