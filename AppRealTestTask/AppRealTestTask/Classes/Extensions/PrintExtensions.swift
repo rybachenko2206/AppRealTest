@@ -1,6 +1,5 @@
 //
 //  PrintExtensions.swift
-//  RxSwiftTraining
 //
 //  Created by Roman Rybachenko on 4/14/17.
 //  Copyright © 2017 Roman Rybachenko. All rights reserved.
